@@ -35,8 +35,8 @@ limpiar.addEventListener("click",(e)=> {
 });
 
 
-function fetchPokemon(id){
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+async function fetchPokemon(id){
+    await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then(res => res.json())
     .then(data => { crearPokemon(data);
     spinner.style.display = "none";
